@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>毛毛虫下载器 - 轻松把音频下载到点读笔</title>
+    <title>毛毛虫点读笔 - 音频下载器</title>
     <style>
         * {
             margin: 0;
@@ -19,14 +19,14 @@
         }
 
         .container {
-            max-width: 900px;
-            margin: 50px auto;
+            max-width: 1000px;
+            margin: 30px auto; /* 整体往上移了 */
             padding: 0 20px;
         }
 
         .header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .header h1 {
@@ -43,8 +43,8 @@
         .card {
             background: white;
             border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 25px;
+            padding: 25px;
+            margin-bottom: 20px;
             box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
         }
 
@@ -62,13 +62,34 @@
         }
 
         .step {
-            margin: 12px 0;
+            margin: 10px 0;
             padding-left: 10px;
         }
 
-        .download-box {
+        /* 截图 + 下载 并排布局 */
+        .flex-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .screenshot {
+            width: 55%;
             text-align: center;
-            margin: 40px 0;
+        }
+
+        .screenshot img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+
+        .download-right {
+            width: 35%;
+            text-align: center;
         }
 
         .download-btn {
@@ -81,26 +102,26 @@
             text-decoration: none;
             font-weight: bold;
             transition: background 0.3s;
+            margin-bottom: 15px;
         }
 
         .download-btn:hover {
             background-color: #219653;
         }
 
-        .screenshot {
-            text-align: center;
-            margin: 30px 0;
-        }
-
-        .screenshot img {
-            max-width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        .tips {
+            background-color: #fff5cc;
+            border-left: 4px #ffaa00 solid;
+            padding: 15px;
+            border-radius: 6px;
+            font-size: 15px;
+            color: #664a00;
+            margin: 10px 0;
         }
 
         .footer {
             text-align: center;
-            margin-top: 50px;
+            margin-top: 30px;
             color: #999;
             font-size: 14px;
         }
@@ -111,43 +132,54 @@
 <div class="container">
     <div class="header">
         <h1>毛毛虫点读笔 音频下载器</h1>
-        <p>一键把音频文件下载到毛毛虫点读笔，简单、快捷、无需复杂操作</p>
+        <p>一键把音频下载到点读笔，简单好用</p>
     </div>
 
     <!-- 软件介绍 -->
     <div class="card">
-        <h2>📥 软件介绍</h2>
-        <p>毛毛虫下载器是一款专为<strong>毛毛虫点读笔</strong>打造的音频下载工具。</p>
-        <p>它可以帮助你快速、稳定地将需要的音频文件直接下载到点读笔中，解决手动拷贝麻烦、文件找不到、格式不识别等问题。</p>
-        <p>无需技术知识，老人孩子也能轻松使用。</p>
+        <h2>📥 工具介绍</h2>
+        <p>本工具专为<strong>毛毛虫点读笔</strong>开发，可以快速将音频文件直接下载到点读笔内。</p>
+        <p>操作简单，无需复杂设置，插上点读笔即可使用。</p>
     </div>
 
-    <!-- 使用教程 -->
+    <!-- 使用方法 -->
     <div class="card">
-        <h2>📖 使用方法</h2>
-        <div class="step">1. 先将<strong>毛毛虫点读笔</strong>用数据线连接到电脑</div>
-        <div class="step">2. 打开「毛毛虫下载器」软件</div>
-        <div class="step">3. 选择你要下载的音频资源</div>
-        <div class="step">4. 点击<strong>开始下载</strong>，等待完成即可</div>
-        <div class="step">5. 安全断开点读笔，就可以直接点读使用啦</div>
+        <h2>📖 使用步骤</h2>
+        <div class="step">1. 将毛毛虫点读笔用数据线连接电脑</div>
+        <div class="step">2. 打开 毛毛虫点读笔下载器.exe</div>
+        <div class="step">3. 选择要下载的音频</div>
+        <div class="step">4. 点击开始下载，等待完成</div>
+        <div class="step">5. 安全断开点读笔，即可正常点读</div>
     </div>
 
-    <!-- 软件截图 -->
+    <!-- 重要安全提示（你要求加的） -->
     <div class="card">
-        <h2>🖼️ 软件界面截图</h2>
-        <div class="screenshot">
-            <img src="screenshot.png" alt="毛毛虫下载器软件截图">
+        <h2>⚠️ 安全提示（必看）</h2>
+        <div class="tips">
+            <strong>软件打开时电脑提示病毒、风险、未知应用，均为正常现象！</strong><br>
+            原因：本软件使用易语言（E语言）开发，大部分杀毒软件会误报。<br>
+            解决方法：<strong>临时关闭杀毒软件 → 允许运行 → 信任软件</strong> 即可正常使用。<br>
+            软件<strong>完全开源、无病毒、无捆绑、无后门</strong>，放心使用！
         </div>
     </div>
 
-    <!-- 下载按钮 -->
-    <div class="download-box">
-        <a href="毛毛虫下载器.exe" class="download-btn">📥 立即下载</a>
-        <p style="margin-top:10px; color:#777;">点击下载最新版 Windows 客户端</p>
+    <!-- 截图 ← 左 ｜ 下载 → 右 -->
+    <div class="card">
+        <h2>🖼️ 软件界面 & 立即下载</h2>
+        <div class="flex-box">
+            <div class="screenshot">
+                <img src="screenshot.png" alt="软件截图">
+            </div>
+            <div class="download-right">
+                <a href="毛毛虫点读笔下载器.exe" class="download-btn">📥 立即下载</a>
+                <p>Windows 客户端<br>开源免费 · 无捆绑</p>
+                <p style="font-size:14px;color:#888;margin-top:8px;">文件：毛毛虫点读笔下载器.exe</p>
+            </div>
+        </div>
     </div>
 
     <div class="footer">
-        毛毛虫下载器 © 版权所有
+        毛毛虫点读笔下载器 • 代码开源 • 安全无毒
     </div>
 </div>
 
